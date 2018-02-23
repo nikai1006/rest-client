@@ -11,7 +11,7 @@
     <groupId>org.wiztools.restclient</groupId>
     <artifactId>restclient-server</artifactId>
     <packaging>jar</packaging>
-
+    <name>restclient-server</name>
     <dependencies>
         <dependency>
             <groupId>org.wiztools</groupId>

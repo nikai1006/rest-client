@@ -11,5 +11,45 @@
     <groupId>org.wiztools.restclient</groupId>
     <artifactId>restclient-cli</artifactId>
     <packaging>jar</packaging>
+    <name>restclient-cli</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.wiztools.restclient</groupId>
+            <artifactId>restclient-lib</artifactId>
+            <version>${version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.cli-parser</groupId>
+            <artifactId>cli</artifactId>
+            <version>7</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.wiztools.restclient.cli.CliMain</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>assembly</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
