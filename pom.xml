@@ -14,7 +14,18 @@
         <module>restclient-cli</module>
         <module>restclient-jfx</module>
     </modules>
-
+    <distributionManagement>
+        <repository>
+            <id>nikai-nexus</id>
+            <name>Releases</name>
+            <url>http://nikai.net.cn/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nikai-snapshots</id>
+            <name>Snapshots</name>
+            <url>http://nikai.net.cn/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.taretEncoding>UTF-8</project.build.taretEncoding>
